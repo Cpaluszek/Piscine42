@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 10:43:21 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/06 17:53:26 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/06 17:35:55 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/06 17:52:02 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char *dest, char *src)
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int n)
 {
 	int	dest_cursor;
 	int	src_cursor;
@@ -20,11 +21,13 @@ char	*ft_strcat(char *dest, char *src)
 	{
 		dest_cursor++;
 	}
-	while (src[src_cursor])
+	while (src[src_cursor] && dest_cursor < n - 1)
 	{
 		dest[dest_cursor] = src[src_cursor];
 		dest_cursor++;
 		src_cursor++;
 	}
-	return (dest);
+	if (n > 0 && dest_cursor < n)
+		dest[dest_cursor] = '\0';
+	return (dest_cursor + src_cursor);
 }

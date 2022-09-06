@@ -1,19 +1,15 @@
 #include <stdio.h>
 #include <string.h>
-int	ft_strcatp(char *dest, char *src);
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int n);
 
 int main(void)
 {
-	char s1[] = "a111";
-	char s2[] = "a122";
+	char src[50], dest[50];
 
-	char * own = ft_strcat(s1, s2);
-	printf(">> own=%s\n", own);
-
-	s1 = "a111";
-	s2 = "a122"
-	char *expected = strcat(s1, s2);
-
-	printf(">> expected=%s\n", expected);
-
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+	
+	//int own  = ft_strlcat(dest, src, 13);
+	int own = strlcat(dest, src, 13);
+	printf("return=%i --- str=%s\n", own, dest);
 }
