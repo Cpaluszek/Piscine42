@@ -6,21 +6,20 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 17:47:02 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/03 17:50:18 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 08:49:02 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_lowercase(char *str)
 {
-	char	c;
+	int	i;
 
-	c = *str;
-	while (c != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (c <= 'a' || c >= 'z')
+		if (str[i] < 'a' || str[i] > 'z')
 			return (0);
-		str++;
-		c = *str;
+		i++;
 	}
 	return (1);
 }

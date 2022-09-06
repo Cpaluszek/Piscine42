@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/03 15:22:46 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/06 08:32:54 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/05 08:17:55 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/06 10:20:43 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+int	ft_strlen(char *str);
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 
-	i = 0;
-	while (i < n && src[i] != '\0')
+	if (size != 0)
 	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
+		i = 0;
+		while (src[i] != '\0' && i < size)
+		{
+			dest[i] = src[i];
+			i++;
+		}
 		dest[i] = '\0';
-		i++;
 	}
-	return (dest);
+	return (ft_strlen(src));
+}
+
+int	ft_strlen(char *str)
+{
+	int		length;
+	char	c;
+
+	length = 0;
+	c = *str;
+	while (c != '\0')
+	{
+		str++;
+		c = *str;
+		length++;
+	}
+	return (length);
 }

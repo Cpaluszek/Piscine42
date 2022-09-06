@@ -6,22 +6,19 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 17:55:28 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/04 12:11:53 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 09:37:58 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 char	*ft_strupcase(char *str)
 {
-	char	c;
-	char	*origin_str;
+	int	i;
 
-	origin_str = str;
-	c = *str;
-	while (c != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (c >= 'a' || c <= 'z')
-			*str -= 32;
-		str++;
-		c = *str;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
 	}
-	return (origin_str);
+	return (str);
 }

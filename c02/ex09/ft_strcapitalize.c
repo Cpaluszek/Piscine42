@@ -6,58 +6,45 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 18:02:48 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/04 14:03:55 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 09:37:12 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 char	*ft_strlowcase(char *str);
 
 char	*ft_strcapitalize(char *str)
 {
-	char	c;
-	char	*origin_str;
-	int		word_done;
+	int	i;
+	int	waiting_next_word;
 
-	//ft_strlowcase(str);
-	word_done = 0;
-	origin_str = str;
-	c = *str;
-	while (c != '\0')
+	i = 0;
+	waiting_next_word = 1;
+	ft_strlowcase(str);
+	while (str[i] != '\0')
 	{
-		if (c >= 'a' && c <= 'z')
-		{ 
-			if(!word_done)
-			{
-				*str -= 32;
-				word_done = 1;
-			}
-		}
-		else if (c < 'A' || (c > 'Z' && c < 'a') || c > 'z')
+		if (waiting_next_word && str[i] >= 'a' && str[i] <= 'z')
 		{
-			word_done = 1;
+			str[i] -= 32;
+			waiting_next_word = 0;
 		}
-		else if (c >= 'A' && c <= 'Z')
-			word_done = 1;
-		else 
-			word_done = 0;
-		str++;
-		c = *str;
+		else
+		{
+			waiting_next_word = (str[i] >= ' ' && str[i] <= '0');
+		}
+		i++;
 	}
-	return (origin_str);
+	return (str);
 }
 
 char	*ft_strlowcase(char *str)
 {
-	char	c;
-	char	*origin_str;
+	int	i;
 
-	origin_str = str;
-	c = *str;
-	while (c != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (c >= 'A' || c <= 'Z')
-			*str += 32;
-		str++;
-		c = *str;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
+		i++;
 	}
-	return (origin_str);
+	return (str);
 }

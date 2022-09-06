@@ -6,23 +6,20 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 17:57:56 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/04 12:12:12 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 09:06:03 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
-	char	c;
-	char	*origin_str;
+	int	i;
 
-	origin_str = str;
-	c = *str;
-	while (c != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (c >= 'A' || c <= 'Z')
-			*str += 32;
-		str++;
-		c = *str;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
+		i++;
 	}
-	return (origin_str);
+	return (str);
 }
