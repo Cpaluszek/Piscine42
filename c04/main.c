@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <string.h>
-void ft_putnbr(int nb);
+int	ft_atoi_base(char *str, char *base);
 
 int main(void)
 {
-	ft_putnbr(0);
-	printf("\n");
-	ft_putnbr(-214748648);
+	char *base = "01";
+	char *src = "1223456";
+
+	printf("string=%s - atoi=%i", ft_atoi_base(src, base));
 }
