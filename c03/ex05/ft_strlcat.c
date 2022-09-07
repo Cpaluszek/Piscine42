@@ -6,14 +6,14 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 17:35:55 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/06 17:52:02 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 12:04:21 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int n)
 {
-	int	dest_cursor;
-	int	src_cursor;
+	unsigned int	dest_cursor;
+	unsigned int	src_cursor;
 
 	dest_cursor = 0;
 	src_cursor = 0;

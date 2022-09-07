@@ -1,31 +1,35 @@
 Done:
-✔ Exam C00 @done(22-09-03 14:59)
-  100%
-✔ C01 @done(22-09-05 09:44)
-  100%
+✔ Exam C00 - 100% @done(22-09-03 14:59)
+✔ Rush00 - 116% @done(22-09-07 18:10)
+✔ C01 - 100% @done(22-09-05 09:44)
 Incomplete:
   ☐ Shell00 - 85%
+    41 string 42 42 file
   ☐ Shell01 - 77%
     exo7 add space after ,
   ☐ c00 - 60%
     ex07 a recup dans c04
+  ☐ C02 - 55%
+    ex09
+    ex10
+    ex11 le char `DEL` est printable !
+      unsigned char plutot que char
 
 Todo:
   Days:
-    ☐ C02
-      ex11 le char `DEL` est printable !
-    ☐ Retry
-    ex00 ne passe pas - manque le char '/0' a la fin
     ☐ C03
+      1st try -> 0%
+      correction seems fine
+      ex05 -> last while : should we check dest[i]
     ☐ C04
+      ☐ Correction
     ☐ C05
     ☐ C06
     ☐ C07
     ☐ C08
   Exams:
     ☐ Inscription Exam01
-      ☐ Project
-      ☐ Agenda
+      ✔ Project @done(22-09-07 18:09)
+      ✔ Agenda @done(22-09-07 18:09)
   Rushs:
-    ☐ Rush00
-      ☐ eval a 15h
+    ☐ Rush01

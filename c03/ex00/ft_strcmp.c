@@ -6,22 +6,19 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 11:00:05 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/05 11:25:42 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 12:02:58 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_strcmp(char *s1, char *s2)
 {
-	int	result;
 	int	i;
 
 	i = 0;
-	result = 0;
-	while (s2[i])
+	while (s2[i] && s1[i])
 	{
-		result += s1[i] - s2[i];
-		if (result != 0)
+		if (s1[i] - s2[i] != 0)
 			break ;
 		i++;
 	}
-	return (result);
+	return (s1[i] - s2[i]);
 }

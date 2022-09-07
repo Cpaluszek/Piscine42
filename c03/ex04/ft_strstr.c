@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 16:36:40 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/06 17:34:53 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 12:03:50 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_strcmp(char *s1, char *s2);
@@ -30,17 +30,14 @@ char	*ft_strstr(char *str, char *to_find)
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int	result;
 	int	i;
 
 	i = 0;
-	result = 0;
-	while (s2[i])
+	while (s2[i] && s1[i])
 	{
-		result += s1[i] - s2[i];
-		if (result != 0)
+		if (s1[i] - s2[i] != 0)
 			break ;
 		i++;
 	}
-	return (result);
+	return (s1[i] - s2[i]);
 }
