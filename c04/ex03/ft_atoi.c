@@ -6,9 +6,10 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 08:14:09 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/07 08:31:35 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/08 11:55:58 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+int	ft_is_whitespace(char c);
 
 int	ft_atoi(char *str)
 {
@@ -19,7 +20,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	sign = 0;
 	result = 0;
-	while (str[i] == ' ')
+	while (ft_is_whitespace(str[i]))
 		i++;
 	while (str[i] == '+' || str[i] == '-')
 	{
@@ -36,4 +37,10 @@ int	ft_atoi(char *str)
 	if (sign % 2 == 1)
 		result *= -1;
 	return (result);
+}
+
+int	ft_is_whitespace(char c)
+{
+	return (c == ' ' || c == '\f' || c == '\n' || c == '\r' \
+		|| c == '\t' || c == '\v');
 }

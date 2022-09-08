@@ -1,42 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 18:19:29 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/08 11:21:10 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/08 16:27:39 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/08 17:29:34 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-#include <unistd.h>
+int	ft_count_digits(int nb);
 
-void	ft_putchar(char c);
-
-void	ft_putnbr(int nb)
+int	ft_sqrt(int nb)
 {
-	if (nb == -2147483648)
+	int	x;
+	int	digits;
+
+	x = 1;
+	digits = ft_count_digits(nb);
+	printf("digits = %i\n", digits);
+	while (digits > 2)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		nb = 147483648;
+		x *= 10;
+		digits = digits - 2;
 	}
-	else if (nb < 0)
-	{	
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
+	while (x * x < nb)
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		x++;
 	}
-	else
-		ft_putchar(nb + '0');
+	if (x * x == nb)
+		return (x);
+	return (0);
 }
 
-void	ft_putchar(char c)
+int	ft_count_digits(int nb)
 {
-	write(1, &c, 1);
+	int	digits;
+
+	digits = 1;
+	while (nb / 10 >= 1)
+	{
+		nb /= 10;
+		digits++;
+	}
+	return (digits);
 }

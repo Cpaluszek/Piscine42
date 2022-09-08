@@ -6,23 +6,21 @@ Incomplete:
   ☐ Shell00 - 85%
     41 string 42 42 file
   ☐ Shell01 - 77%
-    exo7 add space after ,
+  exo7 add space after ,
   ☐ c00 - 60%
-    ex07 a recup dans c04
+  ex07 a recup dans c04
   ☐ C02 - 55%
-    ex09
-    ex10
-    ex11 le char `DEL` est printable !
-      unsigned char plutot que char
-
+  ex09
+  ex10
+  ex11 le char `DEL` est printable !
+  ☐ C03 - 50%
+    ex04 -
+    ex05 -> last while : should we check dest[i]
+  ☐ C04 - 70%
+    putnbr base ne gere pas INT MIN ET MAX
+    
 Todo:
   Days:
-    ☐ C03
-      1st try -> 0%
-      correction seems fine
-      ex05 -> last while : should we check dest[i]
-    ☐ C04
-      ☐ Correction
     ☐ C05
     ☐ C06
     ☐ C07

@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 08:32:38 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/07 09:11:21 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/08 12:22:09 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -33,6 +33,11 @@ void	ft_putnbr_base(int nbr, char *base)
 			if (ft_str_contains(base + i + 1, base[i]))
 				return ;
 		i++;
+	}
+	if (nbr < 0)
+	{
+		ft_putchar('-');
+		nbr *= -1;
 	}
 	ft_printnbr_base(nbr, base, len);
 }
