@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 10:43:35 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/09 13:51:11 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/12 16:47:09 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char	*ft_strcpy(char *src, char *dest)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 

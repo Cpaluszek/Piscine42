@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:31:58 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/09 13:49:59 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/13 08:56:38 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,14 @@ int	*ft_range(int min, int max)
 	int	i;
 
 	size = max - min;
-	i = 0;
 	if (size < 1)
 		return (0);
-	tab = (int *) malloc (size * sizeof(int));
+	if (min < 0 && max > 0)
+		size++;
+	tab = malloc (size * sizeof(int));
+	if (tab == 0)
+		return (0);
+	i = 0;
 	while (i < size)
 	{
 		tab[i] = min + i;
