@@ -1,31 +1,37 @@
 Done:
 ✔ Exam C00 - 100% @done(22-09-03 14:59)
 ✔ Rush00 - 116% @done(22-09-07 18:10)
+✔ Rush01 - 0% good feedback @done(22-09-12 14:27)
 ✔ C01 - 100% @done(22-09-05 09:44)
 ✔ C06 - 100% @done(22-09-09 13:04)
 Incomplete:
-  ☐ Shell00 - 85%
-    41 string 42 42 file
-  ☐ Shell01 - 77%
+☐ Shell00 - 85%
+  41 string 42 42 file
+☐ Shell01 - 77%
   exo7 add space after ,
-  ☐ c00 - 60%
+☐ c00 - 60%
   ex07 a recup dans c04
-  ☐ C02 - 55%
+☐ C02 - 55%
   ex09
   ex10
   ex11 le char `DEL` est printable !
-  ☐ C03 - 50%
-    ex04 -
-    ex05 -> last while : should we check dest[i]
-  ☐ C04 - 70%
-    putnbr base ne gere pas INT MIN ET MAX
+☐ C03 - 50%
+  ex04 -
+  ex05 -> last while : should we check dest[i]
+☐ C04 - 70%
+  putnbr base ne gere pas INT MIN ET MAX
+☐ C05 - 70%
+  ☐ ex07 : superieur ou egal et pas strictement sup
     
 Todo:
   Days:
-    ☐ C05
     ☐ C07
-      malloc
+      ☐ Ex01 - Timeout 1/3
+      ☐ Ex03
+      ☐ Ex04
+      ☐ Ex05
     ☐ C08
+      t_bool = type enum
   Exams:
     ☐ Inscription Exam01
       ✔ Project @done(22-09-07 18:09)
