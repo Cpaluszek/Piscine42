@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 08:12:59 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/14 12:14:16 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/15 14:58:13 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -15,7 +15,7 @@ int		ft_strcontains(char *str, char *sep);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 int		ft_len(char *str);
 int		count_strings(char *str, char *charset, int s_count);
-char	**splitter(char *str, char *charset, int s_count);
+char	**splitter(char *str, char *charset, int s_count, int offset);
 
 char	**ft_split(char *str, char *charset)
 {
@@ -35,17 +35,16 @@ char	**ft_split(char *str, char *charset)
 			i += offset;
 		}
 	}
-	result = splitter(str, charset, s_count);
+	result = splitter(str, charset, s_count, offset);
 	result[s_count - 1] = NULL;
 	return (result);
 }
 
-char	**splitter(char *str, char *charset, int s_count)
+char	**splitter(char *str, char *charset, int s_count, int offset)
 {
 	char	**result;
 	int		i;
 	int		j;
-	int		offset;
 
 	result = malloc (sizeof(char *) * s_count);
 	if (result == 0)
@@ -66,6 +65,7 @@ char	**splitter(char *str, char *charset, int s_count)
 			i += offset;
 		}
 	}
+	result[j - 1] = NULL;
 	return (result);
 }
 

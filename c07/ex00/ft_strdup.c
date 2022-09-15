@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 10:43:35 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/12 16:47:09 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/15 08:01:36 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strdup(char *src)
 
 	length = ft_strlen(src) + 1;
 	cp = (char *) malloc (length * sizeof(char));
+	if (cp == 0)
+		return (0);
 	cp = ft_strcpy(src, cp);
 	return (cp);
 }

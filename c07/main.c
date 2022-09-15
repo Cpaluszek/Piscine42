@@ -35,27 +35,25 @@ int	main(int argc, char **argv)
 	if (argc > 1)
 	{
 		char **strs = argv + 1;
-		char *join = ft_strjoin(argc - 1, strs, "-%-");
+		char *join = ft_strjoin(argc - 1, strs, "uwu");
 		if (join != 0)
 			printf("join = %s", join);
 		free(join);
 	}
 
 	printf("\n\n>------ CONVERT BASE ------\n");
-	printf("   ---++--12345, 0123456789, 0123456789ABCDEF\n");
 	char *convert = ft_convert_base("   ---++--12345", "0123456789", "0123456789ABCDEF");
 	if (convert != 0)
 		printf("convert = %s\n", convert);
 	free(convert);
-	printf("\n   --12345, 0123456789, 01\n");
-	convert = ft_convert_base("   --12345", "0123456789", "01");
+	convert = ft_convert_base("   -utuuts", "salut", "0123456789");
 	if (convert != 0)
 		printf("convert = %s\n", convert);
 	free(convert);
 
 	printf("\n\n>------ SPLIT ------\n");
-	printf("Test-de-la+fonction-split----double sep  | sep = \'+-\'\n");
-	char **splits = ft_split("Test-de-la+fonction-split----double-sep", "-+");
+	printf("Test-de-la+fonction-split----double sep  | sep = \'+-e\'\n");
+	char **splits = ft_split("Test-de-la+fonction-split----double-sep", "-+e");
 	int i = 0;
 	if (splits != 0)
 		while (splits[i] && splits[i] != 0)

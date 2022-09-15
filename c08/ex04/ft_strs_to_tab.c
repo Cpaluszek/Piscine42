@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 13:44:03 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/15 08:06:48 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/15 15:34:49 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/15 15:46:51 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+#include "ft_stock_str.h"
 
-#include <stdlib.h>
-
-int	ft_ultimate_range(int **range, int min, int max)
+struct s_stock_str	*fr_strs_to_tab(int ac, char **av)
 {
-	int	i;
-	int	*tab;
 
-	if (min >= max)
-	{
-		*range = NULL;
-		return (0);
-	}
-	tab = malloc ((max - min) * sizeof(int *));
-	if (tab == NULL)
-		return (-1);
-	i = 0;
-	while (min < max)
-	{
-		tab[i] = min;
-		min++;
-		i++;
-	}
-	*range = tab;
-	return (i);
+}
+
+
+int	main(int argc, char **argv)
+{
+	
 }

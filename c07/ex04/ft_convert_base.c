@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:19:33 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/14 08:12:20 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/15 14:45:43 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		check_whitespace(char c);
 int		check_base(char *base);
-long	base_to_decimal(char *nbr, char *base_from);
+long	base_to_decimal(char *nbr, char *base_from, int *error);
 char	*decimal_to_base(long nbr, char *base_to);
 int		str_contains(char *str, char c);
 
@@ -38,7 +38,9 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 			sign++;
 		i++;
 	}
-	dec_nbr = base_to_decimal(nbr + i, base_from);
+	dec_nbr = base_to_decimal(nbr + i, base_from, &i);
+	if (i == -1)
+		return (result);
 	if (sign % 2 == 1)
 		dec_nbr *= -1;
 	result = decimal_to_base(dec_nbr, base_to);

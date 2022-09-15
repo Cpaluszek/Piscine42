@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 13:44:03 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/15 08:06:48 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/14 17:31:59 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/14 17:32:41 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
+# include <unistd.h>
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define TRUE 1
+# define FALSE 0
+# define SUCCESS 0
+# define EVEN(x) x % 2 == 0
 
-int	ft_ultimate_range(int **range, int min, int max)
-{
-	int	i;
-	int	*tab;
+typedef int	t_bool;
+void	ft_putstr(char *str);
+t_bool	ft_is_even(int nbr);
 
-	if (min >= max)
-	{
-		*range = NULL;
-		return (0);
-	}
-	tab = malloc ((max - min) * sizeof(int *));
-	if (tab == NULL)
-		return (-1);
-	i = 0;
-	while (min < max)
-	{
-		tab[i] = min;
-		min++;
-		i++;
-	}
-	*range = tab;
-	return (i);
-}
+#endif

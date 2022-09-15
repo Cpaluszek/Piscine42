@@ -6,17 +6,16 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:41:33 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/14 08:12:10 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/15 14:57:07 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-#include <stdio.h>
 
 int		ft_slen(char *str);
 int		str_contains(char *str, char c);
 char	*long_to_base(long nb, char *base_to, int len, int sign);
 
-long	base_to_decimal(char *nbr, char *base_from)
+long	base_to_decimal(char *nbr, char *base_from, int *error)
 {
 	long	result;
 	int		b_len;
@@ -35,6 +34,8 @@ long	base_to_decimal(char *nbr, char *base_from)
 		result += j;
 		i++;
 	}
+	if (i == 0)
+		*error = -1;
 	return (result);
 }
 
@@ -82,8 +83,9 @@ char	*long_to_base(long nb, char *base_to, int len, int sign)
 	int		b_len;
 	int		i;
 
-	result = malloc (sizeof(char) * (len + 1));
-	printf("size=%i\n", len + 1);
+	result = malloc (sizeof(char) * (len + 2));
+	if (result == 0)
+		return (0);
 	b_len = ft_slen(base_to);
 	i = len;
 	if (sign == 1)
