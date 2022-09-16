@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:19:33 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/15 14:45:43 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/16 08:44:00 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	int		i;
 
 	result = NULL;
-	if (!check_base(base_from) || !check_base(base_to))
+	if (!check_base(base_from) || !check_base(base_to) || nbr == NULL)
 		return (result);
 	i = 0;
 	while (nbr[i] && check_whitespace(nbr[i]))
@@ -54,6 +54,8 @@ int	check_base(char *base)
 
 	i = 0;
 	len = 0;
+	if (base == NULL)
+		return (0);
 	while (base[len])
 		len++;
 	if (len < 2)

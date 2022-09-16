@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 10:06:36 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/15 14:08:56 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/16 08:31:19 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -20,25 +20,25 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	char	*join;
 	int		i;
 	int		tot_len;
-	int		flag;
+	int		sep_needed;
 
 	join = NULL;
 	i = 0;
-	flag = 0;
-	if (size < 1)
+	sep_needed = 0;
+	if (size < 1 || sep == NULL || strs == NULL)
 		return (join);
 	tot_len = get_tot_len(strs, sep, size);
 	join = (char *) malloc (sizeof(char) * (tot_len + 1));
 	if (join == 0)
-		return (0);
+		return (join);
 	join[0] = '\0';
 	join[tot_len] = '\0';
 	while (i < size)
 	{
-		if (flag-- == 1)
+		if (sep_needed-- == 1)
 			join = ft_strcat(join, sep);
 		if (ft_strlength(join) != ft_strlength(ft_strcat(join, strs[i++])))
-			flag = 1;
+			sep_needed = 1;
 	}
 	return (join);
 }

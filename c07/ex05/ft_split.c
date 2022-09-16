@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 08:12:59 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/15 14:58:13 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/16 09:56:05 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -26,6 +26,8 @@ char	**ft_split(char *str, char *charset)
 
 	i = 0;
 	s_count = 2;
+	if (charset == NULL || str == NULL)
+		return (NULL);
 	while (str[i++])
 	{
 		offset = ft_strcontains(str + i - 1, charset);

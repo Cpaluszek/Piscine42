@@ -11,38 +11,40 @@ char	**ft_split(char *str, char *charset);
 int	main(int argc, char **argv)
 {
 
-		printf(">------ STRDUP ------\n");
+		/*printf(">------ STRDUP ------\n");
 	char *copy = 0;
 	copy = ft_strdup("Test de la chaine a copier"); 
 	printf("copy = %s\n", copy);
-	free(copy);
+	free(copy);*/
 	
-	printf("\n>------ RANGE ------\n");
-   	int *tab = ft_range(1, 100);
-	for (int i = 0; tab[i] < 99; i++)
+	//int min = -2147;//48364;
+	//int max = 2147;//48364;
+	/*printf("\n>------ RANGE ------\n");
+   	int *tab = ft_range(min, max);
+	for (long i = 0; i < (long)(max-min); i++)
 		printf("%i ", tab[i]);
 	free(tab);
 
 	printf("\n\n>------ ULTIMATE RANGE ------\n");
 	int *tab2 = NULL;
-	int size = ft_ultimate_range(&tab2, -2, 25);
+	int size = ft_ultimate_range(&tab2, min, max);
 	if (size > 0)
 		for (int i = 0; i < size; i++)
 			printf("%i ", tab2[i]);
-	free(tab2);
+	free(tab2);*/
 
 	printf("\n\n>------ STRJOIN ------\n");
 	if (argc > 1)
 	{
 		char **strs = argv + 1;
-		char *join = ft_strjoin(argc - 1, strs, "uwu");
+		char *join = ft_strjoin(argc - 1, strs, "-+-");
 		if (join != 0)
 			printf("join = %s", join);
 		free(join);
 	}
 
 	printf("\n\n>------ CONVERT BASE ------\n");
-	char *convert = ft_convert_base("   ---++--12345", "0123456789", "0123456789ABCDEF");
+	char *convert = ft_convert_base(NULL/*"   ---++-- 12345"*/, "0123456789", "0123456789ABCDEF");
 	if (convert != 0)
 		printf("convert = %s\n", convert);
 	free(convert);
