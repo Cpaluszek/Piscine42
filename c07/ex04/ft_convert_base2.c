@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:41:33 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/16 08:44:15 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/17 09:53:34 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -58,7 +58,7 @@ char	*decimal_to_base(long nbr, char *base_to)
 		len++;
 		sign = 1;
 	}
-	while (x < nbr)
+	while (x <= nbr)
 	{
 		x *= b_len;
 		len++;

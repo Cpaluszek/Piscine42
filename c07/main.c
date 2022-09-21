@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 char	*ft_strdup(char *src);
 int		*ft_range(int min, int max);
@@ -33,32 +34,32 @@ int	main(int argc, char **argv)
 			printf("%i ", tab2[i]);
 	free(tab2);*/
 
-	printf("\n\n>------ STRJOIN ------\n");
+	printf("\n>------ STRJOIN ------\n");
 	if (argc > 1)
 	{
 		char **strs = argv + 1;
-		char *join = ft_strjoin(argc - 1, strs, "-+-");
+		char *join = ft_strjoin(argc - 1, strs, "\n");
 		if (join != 0)
-			printf("join = %s", join);
+			printf("join = %s\n", join);
 		free(join);
 	}
 
-	printf("\n\n>------ CONVERT BASE ------\n");
-	char *convert = ft_convert_base(NULL/*"   ---++-- 12345"*/, "0123456789", "0123456789ABCDEF");
+	/*printf("\n\n>------ CONVERT BASE ------\n");
+	char *convert = ft_convert_base("   ---++--2147483648", "0123456789", "0123456789ABCDEF");
 	if (convert != 0)
 		printf("convert = %s\n", convert);
 	free(convert);
-	convert = ft_convert_base("   -utuuts", "salut", "0123456789");
+	convert = ft_convert_base("-2147483648", "0123456789", "01");
 	if (convert != 0)
 		printf("convert = %s\n", convert);
 	free(convert);
-
-	printf("\n\n>------ SPLIT ------\n");
+*/
+	/*printf("\n\n>------ SPLIT ------\n");
 	printf("Test-de-la+fonction-split----double sep  | sep = \'+-e\'\n");
-	char **splits = ft_split("Test-de-la+fonction-split----double-sep", "-+e");
+	char **splits = ft_split("Test-de-la+fonction-split----double-sep", "");
 	int i = 0;
 	if (splits != 0)
-		while (splits[i] && splits[i] != 0)
+		while (splits[i])
 			printf(" > %s\n", splits[i++]);
-	free(splits);
+	free(splits);*/
 }

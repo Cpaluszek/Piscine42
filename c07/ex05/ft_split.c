@@ -6,7 +6,7 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 08:12:59 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/16 09:56:05 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/17 10:05:48 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -38,7 +38,7 @@ char	**ft_split(char *str, char *charset)
 		}
 	}
 	result = splitter(str, charset, s_count, offset);
-	result[s_count - 1] = NULL;
+	result[s_count - 1] = 0;
 	return (result);
 }
 
@@ -67,7 +67,7 @@ char	**splitter(char *str, char *charset, int s_count, int offset)
 			i += offset;
 		}
 	}
-	result[j - 1] = NULL;
+	result[s_count - 1] = 0;
 	return (result);
 }
 
