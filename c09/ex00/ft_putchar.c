@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:35:57 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/21 15:24:57 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/08/31 17:44:11 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/01 09:25:56 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+#include "unistd.h"
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(Value) Value >= 0 ? Value : -Value
-
-#endif
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}

@@ -1,17 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:35:57 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/21 15:24:57 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/06 18:16:51 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/06 18:18:59 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(Value) Value >= 0 ? Value : -Value
+void	ft_putstr(char *str)
+{
+	int	i;
 
-#endif
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+}

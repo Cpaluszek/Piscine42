@@ -43,23 +43,25 @@ int	main(int argc, char **argv)
 			printf("join = %s\n", join);
 		free(join);
 	}
+/*
+	printf("\n\n>------ CONVERT BASE ------\n");
+	char *convert = ft_convert_base("   --+-+2147", "0123456789", "0123456789ABCDEF");
+	if (convert != 0)
+		printf("convert = %s\n", convert);
+	free(convert);
+	convert = ft_convert_base("-754", "01234567", "01-");
+	if (convert != 0)
+		printf("convert = %s\n", convert);
+	free(convert);*/
 
-	/*printf("\n\n>------ CONVERT BASE ------\n");
-	char *convert = ft_convert_base("   ---++--2147483648", "0123456789", "0123456789ABCDEF");
-	if (convert != 0)
-		printf("convert = %s\n", convert);
-	free(convert);
-	convert = ft_convert_base("-2147483648", "0123456789", "01");
-	if (convert != 0)
-		printf("convert = %s\n", convert);
-	free(convert);
-*/
-	/*printf("\n\n>------ SPLIT ------\n");
-	printf("Test-de-la+fonction-split----double sep  | sep = \'+-e\'\n");
-	char **splits = ft_split("Test-de-la+fonction-split----double-sep", "");
+	printf("\n\n>------ SPLIT ------\n");
+	//printf("Test-de-la+fonction-split----double sep  | sep = \'+-e\'\n");
+	char **splits = ft_split("Test-de-la+fonction-split----double-sep+-++--", "-+");
 	int i = 0;
 	if (splits != 0)
 		while (splits[i])
 			printf(" > %s\n", splits[i++]);
-	free(splits);*/
+
+	printf(" > %s\n", splits[i++]);
+	free(splits);
 }

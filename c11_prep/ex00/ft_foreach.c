@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:35:57 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/21 15:24:57 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/22 10:42:51 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/22 12:19:50 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(Value) Value >= 0 ? Value : -Value
+void	ft_foreach(int * tab, int length, void(*f)(int))
+{
 
-#endif
+}

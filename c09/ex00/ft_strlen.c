@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:35:57 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/21 15:24:57 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/06 18:08:56 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/06 18:16:24 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(Value) Value >= 0 ? Value : -Value
+int	ft_strlen(char *str)
+{
+	int	len;
 
-#endif
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
+}

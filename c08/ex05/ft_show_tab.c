@@ -6,11 +6,11 @@
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 10:35:53 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/16 12:41:27 by cpalusze         ###   ########lyon.fr   */
+/*   Updated: 2022/09/21 15:27:54 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../ex04/ft_stock_str.h"
 #include <unistd.h>
+#include "ft_stock_str.h"
 
 void	ft_putchar(char c);
 void	ft_putnbr(int nb);

@@ -1,17 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpalusze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:35:57 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/09/21 15:24:57 by cpalusze         ###   ########lyon.fr   */
+/*   Created: 2022/09/05 11:00:05 by cpalusze          #+#    #+#             */
+/*   Updated: 2022/09/07 12:02:58 by cpalusze         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(Value) Value >= 0 ? Value : -Value
-
-#endif
+	i = 0;
+	while (s2[i] && s1[i])
+	{
+		if (s1[i] - s2[i] != 0)
+			break ;
+		i++;
+	}
+	return (s1[i] - s2[i]);
+}
